@@ -1,5 +1,6 @@
 # Log4Shell-Detection
 ## Tenable blog
+**READ THIS FIRST**
 https://www.tenable.com/blog/cve-2021-44228-proof-of-concept-for-critical-apache-log4j-remote-code-execution-vulnerability
 
 ## Identify Log4j installs without running a new scan

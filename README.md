@@ -29,3 +29,9 @@ A successful direct check finding will look like this:
 ## Log4Shell scan template
 A Log4Shell scan template has been released. This scan template contains all of the required scan settings to identify Log4Shell vulnerabilities.
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/log4shell-template.png)
+
+## Log4Shell dashboards
+### Tenable.io
+https://www.tenable.com/tenable-io-dashboards/log4shell-critical-vulnerability
+### Tenable.sc
+https://www.tenable.com/sc-dashboards/log4shell-critical-vulnerability

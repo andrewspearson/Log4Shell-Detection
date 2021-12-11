@@ -23,7 +23,7 @@ https://www.tenable.com/blog/cve-2021-44228-proof-of-concept-for-critical-apache
 **NOTE:**
 Nessus plugin 155998 "Apache Log4j Message Lookup Substitution RCE (Log4Shell) (Direct Check)" will listen on a socket, perform a GET request with a JNDI:LDAP connection string in a few popular HTTP headers, and then wait for a LDAP connection back from the target. If the target connects back and we confirm it's trying to do a LDAP BIND, it will flag the target as vulnerable and output the proof.
 
-Since this plugins listens for an LDAP BIND connect back it will not work on Tenable.io cloud scanners or in certain networks due to firewall rules.
+Since this plugins listens for an LDAP BIND connect back it will not work on Tenable.io cloud scanners or in certain networks due to firewall rules. This plugin WILL work on Nessus Pro, Tenable.io linked scanners, and/or Tenable.sc linked scanners.
 
 A successful direct check finding will look like this:
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/direct-check-finding.png)

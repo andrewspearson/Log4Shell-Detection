@@ -1,4 +1,4 @@
-# Log4Shell-Detection
+# Log4Shell Detection Cheat Sheet
 ## Tenable blog
 **READ THIS FIRST**
 

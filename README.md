@@ -24,5 +24,5 @@ A successful direct check finding will look like this:
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/direct-check-finding.png)
 
 ## Log4Shell scan template
-A Log4Shell scan template has been released. This scan template contains all of the required settings for identifying Log4Shell.
+A Log4Shell scan template has been released. This scan template contains all of the required scan settings to identify Log4Shell vulnerabilities.
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/log4shell-template.png)

@@ -8,7 +8,7 @@ https://www.tenable.com/blog/cve-2021-44228-proof-of-concept-for-critical-apache
 ### Nessus Pro
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/search-nessus-pro.png)
 ### Tenable.io
-![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/search.png)
+![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/tio-log4j-installed.png)
 
 ## Log4Shell plugins
 https://www.tenable.com/plugins/search?q=cves%3A%28%22CVE-2021-44228%22%29&sort=&page=1

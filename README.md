@@ -5,7 +5,7 @@
 https://www.tenable.com/blog/cve-2021-44228-proof-of-concept-for-critical-apache-log4j-remote-code-execution-vulnerability
 
 ## Identify Log4j installs without running a new scan
-Since pretty much no one has remediated this vulnerability yet, organizations that have been running recurring scans can simply query for all log4j installs. This will provide an immediate list of hosts likely vulnerable to Log4Shell without having to wait for new scan results. This will of course require previous authenticated scans and the results will not be valid once remediation efforts have started.
+Organizations that have been running recurring scans can simply query for all log4j installs. This will provide an immediate list of hosts likely vulnerable to Log4Shell without having to wait for new scan results. This will of course require previous authenticated scans and the results will not be valid once remediation efforts have started.
 ### Nessus Pro
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/np-log4j-installed-v2.png)
 ### Tenable.io

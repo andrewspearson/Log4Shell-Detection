@@ -20,7 +20,7 @@ https://www.tenable.com/blog/cve-2021-44228-proof-of-concept-for-critical-apache
 
 All plugins except for 155998 are also agent capable.
 
-**These plugins are released in feed version 202112110647 and later. You might need to [force a plugin update](https://docs.tenable.com/nessus/Content/UpdateNessusSoftware.htm). Currently the [Tenable plugins page](https://www.tenable.com/plugins/search?q=cves%3A%28%22CVE-2021-44228%22%29&sort=&page=1) does not show these plugins, but they are released!**
+**These plugins are released in feed version 202112110647 and later. You might need to [force a plugin update](https://docs.tenable.com/nessus/Content/UpdateNessusSoftware.htm). ~~Currently the [Tenable plugins page](https://www.tenable.com/plugins/search?q=cves%3A%28%22CVE-2021-44228%22%29&sort=&page=1) does not show these plugins, but they are released!~~**
 
 **NOTE:**
 Nessus plugin 155998 "Apache Log4j Message Lookup Substitution RCE (Log4Shell) (Direct Check)" will listen on a socket, perform a GET request with a JNDI:LDAP connection string in a few popular HTTP headers, and then wait for a LDAP connection back from the target. If the target connects back and we confirm it's trying to do a LDAP BIND, it will flag the target as vulnerable and output the proof.

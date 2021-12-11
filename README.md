@@ -1,7 +1,4 @@
 # Log4Shell-Detection
-## Change Log
-1. 20211211u1: Creation
-
 ## Tenable blog
 https://www.tenable.com/blog/cve-2021-44228-proof-of-concept-for-critical-apache-log4j-remote-code-execution-vulnerability
 
@@ -27,3 +24,5 @@ A successful direct check finding will look like this:
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/direct-check-finding.png)
 
 ## Log4Shell scan template
+A Log4Shell scan template has been released. This scan template contains all of the required settings for identifying Log4Shell.
+![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/log4shell-template.png)

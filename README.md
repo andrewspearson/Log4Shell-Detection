@@ -6,7 +6,7 @@ https://www.tenable.com/blog/cve-2021-44228-proof-of-concept-for-critical-apache
 
 ## Identify Log4j installs without running a new scan
 ### Nessus Pro
-![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/search-nessus-pro.png)
+![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/np-log4j-installed.png)
 ### Tenable.io
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/tio-log4j-installed.png)
 

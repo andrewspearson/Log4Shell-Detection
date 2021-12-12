@@ -25,7 +25,7 @@ All plugins except for 155998 are also agent capable.
 **These plugins are released in feed version 202112110647 and later. You might need to [force a plugin update](https://docs.tenable.com/nessus/Content/UpdateNessusSoftware.htm).**
 
 **NOTE:**
-Nessus plugin 155998 "Apache Log4j Message Lookup Substitution RCE (Log4Shell) (Direct Check)" will listen on a socket, perform a GET request with a JNDI:LDAP connection string in a few popular HTTP headers, and then wait for a LDAP connection back from the target. If the target connects back and we confirm it's trying to do a LDAP BIND, it will flag the target as vulnerable and output the proof.
+Nessus plugin 155998 "Apache Log4j Message Lookup Substitution RCE (Log4Shell) (Direct Check)" will listen on a socket, perform a GET request with a JNDI:LDAP connection string in a few popular HTTP headers, and then wait for a LDAP connection back from the target. It will connect back on a random ephemeral port. If the target connects back and we confirm it's trying to do a LDAP BIND, it will flag the target as vulnerable and output the proof.
 
 Since this plugins listens for an LDAP BIND connect back it will not work on Tenable.io cloud scanners or in certain networks due to firewall rules. This plugin WILL work on Nessus Pro, Tenable.io linked scanners, and/or Tenable.sc linked scanners assuming a firewall does not block the connect back traffic.
 

@@ -18,11 +18,11 @@ https://www.tenable.com/plugins/search?q=cves%3A%28%22CVE-2021-44228%22%29&sort=
 There are two remote uncredentialed Nessus plugins:
 
 **1. 155998 - Apache Log4j Message Lookup Substitution RCE (Log4Shell) (Direct Check)**  
-When this plugin is launched the scanner will listen on a random ephemeral port, perform a GET request with a connection string, and then wait for a connection back from the target to the random ephemeral port the scanner is listening on. If the target connects back trying to perform an LDAP BIND the plugin flags as vulnerable. Since this plugins listens for an LDAP BIND connect back it will not work on Tenable.io cloud scanners or in certain networks due to firewall rules. This plugin WILL work on Nessus Pro, Tenable.io linked scanners, and/or Tenable.sc linked scanners assuming a firewall does not block the connect back traffic. This plugin became available in feed version 202112110647 and later.
+When this plugin is launched the scanner will listen on a random ephemeral port, perform a GET request with a connection string, and then wait for a connection back from the target to the random ephemeral port the scanner is listening on. If the target connects back trying to perform an LDAP BIND the plugin flags as vulnerable. Since this plugins listens for an LDAP BIND connect back it will not work on Tenable.io cloud scanners or in certain networks due to firewall rules. This plugin WILL work on Nessus Pro, Tenable.io linked scanners, and/or Tenable.sc linked scanners assuming a firewall does not block the connect back traffic. This plugin became available in feed version 202112110647 and later. Example:
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/155998-np.png)
 
 **2. 156014 - Apache Log4Shell RCE detection via callback correlation (Direct Check HTTP)**  
-This plugin does not require a connect back to the Nessus scanner and will work on Tenable.io cloud scanners. This plugin will make a DNS lookup to verify the presence of the vulnerability. This plugin became available in feed version 202112112213 and later.
+This plugin does not require a connect back to the Nessus scanner and will work on Tenable.io cloud scanners. This plugin will make a DNS lookup to verify the presence of the vulnerability. This plugin became available in feed version 202112112213 and later. Example:
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/156014-np.png)
 
 There are many local/authenticated plugins that are also agent capable.

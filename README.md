@@ -32,7 +32,7 @@ There is also a remote uncredentialed WAS plugin that performs additional checks
 The Nessus plugins will identify Log4Shell vulns in areas that the WAS scanner will not and vice-versa. Organization need to run scans from Nessus/Tenable.io/Tenable.sc AND Tenable WAS in parallel, immediately.
 
 ## Log4Shell scan template
-A Log4Shell scan template has been released. This scan template contains all of the required scan settings and plugins to identify Log4Shell vulnerabilities. This scan template runs extraordinarily fast.
+A Log4Shell scan templates have been released in Nessus, Tenable.io, Tenable.sc, and Tenable WAS. This scan template contains all of the required scan settings and plugins to identify Log4Shell vulnerabilities. For now, use this template to find Log4Shell and not a regular full vuln scan. The Log4Shell scan template runs extraordinarily fast.
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/log4shell-template.png)
 
 ## Log4Shell dashboards

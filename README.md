@@ -29,7 +29,7 @@ There are many local/authenticated plugins that are also agent capable.
 
 There is also a remote uncredentialed WAS plugin that performs additional checks.
 
-The Nessus plugins will identify Log4Shell vulns in areas that the WAS scanner will not and vice-versa. Organization need to run scans from Nessus/Tenable.io/Tenable.sc AND Tenable WAS in parallel, immediately. IMO, once findings are received, prioritize the findings from Nessus/Tenable.io/Tenable.sc as these findings will be the "low hanging fruit" that will be (already is?) worm'ed. Don't neglect the WAS findings though. It is typically not difficult to exploit this vulnerability through web application inputs.
+The Nessus plugins will identify Log4Shell vulns in areas that the WAS scanner will not and vice-versa. Organization need to run scans from Nessus/Tenable.io/Tenable.sc AND Tenable WAS in parallel, immediately.
 
 ## Log4Shell scan template
 A Log4Shell scan template has been released. This scan template contains all of the required scan settings and plugins to identify Log4Shell vulnerabilities. This scan template runs extraordinarily fast.

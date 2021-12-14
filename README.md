@@ -11,7 +11,7 @@ Organizations that have been running recurring scans can simply query for all lo
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/tio-log4j-installed.png)
 
 ## Log4Shell detection by Tenable product
-This table shows which Tenable products currently detect Log4Shell.
+This table shows which Tenable products currently detect Log4Shell. This list will change as updates are released.
 
 | Product | Coverage |
 | ------- | -------- |

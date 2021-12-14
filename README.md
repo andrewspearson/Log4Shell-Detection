@@ -1,4 +1,4 @@
-# Log4Shell Detection Cheat Sheet
+# CVE-2021-44228 Log4Shell Detection Cheat Sheet
 **READ THIS FIRST**
 
 https://community.tenable.com/s/article/Plugins-associated-with-CVE-2021-44228-Log4Shell

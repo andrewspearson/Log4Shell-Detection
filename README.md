@@ -3,7 +3,7 @@ This page is not a product of Tenable but has links directly to relevant Tenable
 
 **READ THIS FIRST**
 
-https://community.tenable.com/s/article/Plugins-associated-with-CVE-2021-44228-Log4Shell
+https://www.tenable.com/log4j
 
 ## Identify Log4j installs without running a new scan
 Organizations that have been running recurring scans can simply query for all log4j installs. This will provide an immediate list of hosts likely vulnerable to Log4Shell without having to wait for new scan results. This will of course require previous authenticated scans and the results will not be valid once remediation efforts have started.

@@ -54,7 +54,7 @@ Plugin output from scanners connected to Tenable.sc might be truncated and not r
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/TSC-merge_plugin_results.png)
 The fix for this is to use Nessus 8.15.0 or later and issue this command on each Nessus scanner ```./nessuscli fix --set merge_plugin_results=true``` Full details are available on this [community page](https://community.tenable.com/s/article/New-Nessus-scanner-setting-Merge-Plugin-Results).
 
-## Nessus 10.0.2 and Tenable.io
+## Initiate plugin updates from Tenable.io
 If you do not want to wait for scheduled plugin updates, then you can manually initiate a plugin refresh starting with Nessus version 10.0.2. You will see a new **Update Plugins** button on any 10.0.2 or later Nessus scanner connected to Tenable.io.
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/Nessus-1002.png)
 Tenable.sc and Nessus Pro has always had the ability to manually refresh plugins.

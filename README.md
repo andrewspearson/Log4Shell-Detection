@@ -1,8 +1,6 @@
 # CVE-2021-44228 Log4Shell Detection Cheat Sheet
 This page is not a product of Tenable but has links directly to relevant Tenable information.
 
-**Official Tenable information**
-
 https://www.tenable.com/log4j
 
 **TL;DR**

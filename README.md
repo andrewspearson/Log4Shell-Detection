@@ -1,13 +1,13 @@
 # CVE-2021-44228 Log4Shell Detection Cheat Sheet
 This page is not a product of Tenable but has links directly to relevant Tenable information.
 
-**READ THIS FIRST**
+**Official Tenable information**
 
 https://www.tenable.com/log4j
 
 **TL;DR**
 1. Make sure your plugins are updating
-2. Use the Log4Shell Vulnerability Ecosystem scan template with credentials
+2. Use the Log4Shell Vulnerability **Ecosystem** scan template with credentials
 3. Use the Tenable.io WAS Log4Shell scan
 4. Remediate
 5. Repeat (plugins will be released frequently so keep scanning)

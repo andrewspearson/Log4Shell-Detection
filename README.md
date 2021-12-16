@@ -40,6 +40,7 @@ When this plugin is launched the scanner will listen on a random ephemeral port,
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/155998-np.png)
 
 **2. 156014 - Apache Log4Shell RCE detection via callback correlation (Direct Check HTTP)**  
+NOTE: There are now many plugins that perform the callback the same way as plugin 156014.
 This plugin does not require a connect back to the Nessus scanner and will work on Tenable.io cloud scanners. This plugin will make a DNS lookup to verify the presence of the vulnerability. This plugin became available in feed version 202112112213 and later. Example:
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/156014-np.png)
 

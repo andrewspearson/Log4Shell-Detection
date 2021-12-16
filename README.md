@@ -5,6 +5,13 @@ This page is not a product of Tenable but has links directly to relevant Tenable
 
 https://www.tenable.com/log4j
 
+**TL;DR**
+1. Make sure your plugins are updating
+2. Use the Log4Shell Vulnerability Ecosystem scan template with credentials
+3. Use the Tenable.io WAS Log4Shell scan
+4. Remediate
+5. Repeat (plugins will be released frequently so keep scanning)
+
 ## Identify Log4j installs without running a new scan
 Organizations that have been running recurring scans can simply query for all log4j installs. This will provide an immediate list of hosts likely vulnerable to Log4Shell without having to wait for new scan results. This will of course require previous authenticated scans and the results will not be valid once remediation efforts have started.
 ### Nessus Pro
@@ -39,8 +46,18 @@ This plugin does not require a connect back to the Nessus scanner and will work 
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/156014-np.png)
 
 ## Log4Shell scan template
-A Log4Shell scan templates have been released in Nessus, Tenable.io, Tenable.sc, and Tenable WAS. This scan template contains all of the required scan settings and plugins to identify Log4Shell vulnerabilities. For now, use this template to find Log4Shell and not a regular full vuln scan. The Log4Shell scan template runs extraordinarily fast.
-![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/log4shell-template.png)
+Tenable released a new Log4Shell scan template on December 15, 2021 called **Log4Shell Vulnerability Ecosystem**. This scan template includes all local and remote checks for Log4Shell. It will also receive new plugins as vendor advisories come in, the other Log4Shell scan templates will not. All other Log4Shell scans that you have already configured should be deleted and replaced by the **Log4Shell Vulnerability Ecosystem** template. The Log4Shell Remote Checks scan template consists of a couple remote checks. It will run quickly through an environment to identify "log hanging fruit" but this is far from a comprehensive Log4Shell scan template. The most effective way to identify Log4Shell is to configure the **Log4Shell Vulnerability Ecosystem** scan template with credentials.
+![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/ecosystem-template.png)
+
+## Fix for Tenable.sc False Negatives
+Plugin output from scanners connected to Tenable.sc might be truncated and not report all instances of Log4Shell. This screen shot is from Tenable.io, but if this same finding was in Tenable.sc, the finding below the red bar would not be reported:
+![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/TSC-merge_plugin_results.png)
+The fix for this is to use Nessus 8.15.0 or later and issue this command on each Nessus scanner ```./nessuscli fix --set merge_plugin_results=true``` Full details are available on this [community page](https://community.tenable.com/s/article/New-Nessus-scanner-setting-Merge-Plugin-Results).
+
+## Nessus 10.0.2 and Tenable.io
+If you do not want to wait for scheduled plugin updates, then you can manually initiate a plugin refresh starting with Nessus version 10.0.2. You will see a new **Update Plugins** button on any 10.0.2 or later Nessus scanner connected to Tenable.io.
+![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/Nessus-1002.png)
+Tenable.sc and Nessus Pro has always had the ability to manually refresh plugins.
 
 ## Log4Shell dashboards
 ### Tenable.io

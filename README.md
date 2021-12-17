@@ -30,6 +30,10 @@ This table shows which Tenable products currently detect Log4Shell. This list wi
 
 The Nessus plugins will identify Log4Shell vulns in areas that the WAS scanner will not and vice-versa. Organization need to run scans from Nessus AND Tenable.io Web Application Scanner (WAS) for full coverage. The reason why organizations need to run a network scan and DAST is explained [here](https://youtu.be/496R1c7ENVs?t=689).
 
+## Log4Shell scan template
+Tenable released a new Log4Shell scan template on December 15, 2021 called **Log4Shell Vulnerability Ecosystem**. This scan template includes all local and remote checks for Log4Shell. It will also receive new plugins as vendor advisories come in, the other Log4Shell scan templates will not. All other Log4Shell scans that you have already configured should be deleted and replaced by the **Log4Shell Vulnerability Ecosystem** template. The Log4Shell Remote Checks scan template consists of a couple remote checks. It will run quickly through an environment to identify "log hanging fruit" but this is far from a comprehensive Log4Shell scan template. The most effective way to identify Log4Shell is to configure the **Log4Shell Vulnerability Ecosystem** scan template with credentials.
+![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/ecosystem-template.png)
+
 ## Log4Shell remote detection plugins
 https://community.tenable.com/s/feed/0D53a00008EPbXGCA1
 
@@ -43,14 +47,13 @@ NOTE: There are now many plugins that perform their callback the same way as thi
 This plugin does not require a connect back to the Nessus scanner and will work on Tenable.io cloud scanners. This plugin will make a DNS lookup to verify the presence of the vulnerability. This plugin became available in feed version 202112112213 and later. Example:
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/156014-np.png)
 
-## Log4Shell scan template
-Tenable released a new Log4Shell scan template on December 15, 2021 called **Log4Shell Vulnerability Ecosystem**. This scan template includes all local and remote checks for Log4Shell. It will also receive new plugins as vendor advisories come in, the other Log4Shell scan templates will not. All other Log4Shell scans that you have already configured should be deleted and replaced by the **Log4Shell Vulnerability Ecosystem** template. The Log4Shell Remote Checks scan template consists of a couple remote checks. It will run quickly through an environment to identify "log hanging fruit" but this is far from a comprehensive Log4Shell scan template. The most effective way to identify Log4Shell is to configure the **Log4Shell Vulnerability Ecosystem** scan template with credentials.
-![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/ecosystem-template.png)
-
 ## Fix for Tenable.sc false negatives
 Plugin output from scanners connected to Tenable.sc might be truncated and not report all instances of Log4Shell. This screen shot is from Tenable.io, but if this same finding was in Tenable.sc, the data below the red bar would not be reported:
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/TSC-merge_plugin_results.png)
 The fix for this is to use Nessus 8.15.0 or later and issue this command on each Nessus scanner ```./nessuscli fix --set merge_plugin_results=true``` Full details are available on this [community page](https://community.tenable.com/s/article/New-Nessus-scanner-setting-Merge-Plugin-Results).
+
+## Fix for TenableCore + Nessus scanner false negatives
+The TenableCore + Nessus virtual appliance runs a host based firewall that will block the callback from plugin 155998 and potentially result in false negatives. The fix for this is documented on this [community page](https://community.tenable.com/s/article/Using-plugin-155998-Apache-Log4j-Message-Lookup-Substitution-RCE-Log4Shell-from-Tenable-Core-Nessus). NOTE: TenableCore + Nessus will still run other callback plugins, such as plugin 156014 without issue.
 
 ## Initiate plugin updates from Tenable.io
 If you do not want to wait for scheduled plugin updates, then you can manually initiate a plugin refresh starting with Nessus version 10.0.2. You will see a new **Update Plugins** button on any 10.0.2 or later Nessus scanner connected to Tenable.io.

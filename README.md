@@ -25,7 +25,7 @@ This table shows which Tenable products currently detect Log4Shell. This list wi
 | Tenable.io cloud scanners | ✔️ |
 | Tenable.io WAS | ✔️ |
 | Tenable.io Container | ✔️ |
-| Tenable.io Frictionless |  |
+| Tenable.io Frictionless | ✔️ |
 | Tenable.ot |  |
 
 The Nessus plugins will identify Log4Shell vulns in areas that the WAS scanner will not and vice-versa. Organization need to run scans from Nessus AND Tenable.io Web Application Scanner (WAS) for full coverage. The reason why organizations need to run a network scan and DAST is explained [here](https://youtu.be/496R1c7ENVs?t=689).

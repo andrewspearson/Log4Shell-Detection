@@ -15,6 +15,9 @@ Organizations that have been running recurring scans can simply query for all lo
 ### Tenable.io
 ![](https://github.com/andrewspearson/file-server/blob/main/repositories/log4shell-detection/tio-log4j-installed.png)
 
+## Identify network daemons not managed by a package manager
+Log4j can be hidden deep inside other software. [Plugin 33851](https://www.tenable.com/plugins/nessus/33851) will identify listening network daemons not managed managed by the system package manager. Results from this plugin should be manually investigated to determine if the network daemon has log4j installed.
+
 ## Log4Shell detection by Tenable product
 This table shows which Tenable products currently detect Log4Shell. This list will change as updates are released.
 
